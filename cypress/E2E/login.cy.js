@@ -1,5 +1,8 @@
 import pageLogin from "../support/pages/login.page";
+import Home from "../support/pages/home.page";
+
 const login = new pageLogin()
+const homePage = new Home()
 
 describe('Validações de login', () => {
     it('É possível realizar login informando username standard_user', () =>{
@@ -10,6 +13,7 @@ describe('Validações de login', () => {
         login.typePassword(password)
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
+        homePage.homePage()
         //cy.screenshot()
     })
 
@@ -21,6 +25,7 @@ describe('Validações de login', () => {
         login.typePassword(password)
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
+        homePage.homePage()
         //cy.screenshot()
     })
 
@@ -32,6 +37,7 @@ describe('Validações de login', () => {
         login.typePassword(password)
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
+        homePage.homePage()
         //cy.screenshot()
     })
 
@@ -43,6 +49,7 @@ describe('Validações de login', () => {
         login.typePassword(password)
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
+        homePage.homePage()
         //cy.screenshot()
     })
 
@@ -54,6 +61,7 @@ describe('Validações de login', () => {
         login.typePassword(password)
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/')
+        cy.get(login.loginError).contains('Username and password do not match any user in this service')
     })
 
     it('Não é possível realizar login informando username inválido', () =>{
@@ -64,5 +72,6 @@ describe('Validações de login', () => {
         login.typePassword(password)
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/')
+        cy.get(login.loginError).contains('Username and password do not match any user in this service')
     })
 })

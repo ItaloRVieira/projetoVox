@@ -2,6 +2,7 @@ export default class pageLogin {
     inputUsername = '#user-name'
     inputPassword = '#password'
     buttonLogin = '#login-button'
+    loginError = '[data-test="error"]'
 
     typeUsername(name){
         cy.get(this.inputUsername).type(name)
@@ -12,4 +13,5 @@ export default class pageLogin {
     clickLogin(){
         cy.get(this.buttonLogin).click()
     }
+
 }
