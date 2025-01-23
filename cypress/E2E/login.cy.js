@@ -14,7 +14,7 @@ describe('Validações de login', () => {
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
         homePage.homePage()
-        //cy.screenshot()
+
     })
 
     it('É possível realizar login informando username locked_out_user', () =>{
@@ -26,7 +26,7 @@ describe('Validações de login', () => {
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
         homePage.homePage()
-        //cy.screenshot()
+
     })
 
     it('É possível realizar login informando username problem_user', () =>{
@@ -38,7 +38,7 @@ describe('Validações de login', () => {
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
         homePage.homePage()
-        //cy.screenshot()
+
     })
 
     it('É possível realizar login informando username performance_glitch_user', () =>{
@@ -50,7 +50,7 @@ describe('Validações de login', () => {
         login.clickLogin()
         cy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html')
         homePage.homePage()
-        //cy.screenshot()
+
     })
 
     it('Não é possível realizar login informando senha inválida', () =>{
