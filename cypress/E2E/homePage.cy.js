@@ -17,18 +17,21 @@ describe('Validação de adição de produtos ao carrinho', () => {
     it('Adicionando um produto ao carrinho pela homepage', () => {
         homePage.addProductOne()
         homePage.clickCart()
+        cy.get(cart.list).should('have.length', 1)
     })
 
     it('Adicionando n produtos ao carrinho pela homepage', () => {
         homePage.addProductOne()
         homePage.addProductTwo()
         homePage.clickCart()
+        cy.get(cart.list).should('have.length', 2)
     })
 
     it('Adicionando um produto ao carrinho pela página do produto', () =>{
         homePage.clickProductOne()
         product.addProduct()
         product.clickCart()
+        cy.get(cart.list).should('have.length', 1)
        
     })
 
@@ -39,6 +42,7 @@ describe('Validação de adição de produtos ao carrinho', () => {
         homePage.clickProductTwo()
         product.addProduct()
         product.clickCart()
+        cy.get(cart.list).should('have.length', 2)
     })
 })
 
@@ -53,6 +57,7 @@ describe('Validação de remoção de produtos ao carrinho', () => {
     it('Removendo um produto do carrinho pela homepage', () => {
         homePage.removeProductOne()
         homePage.clickCart()
+        cy.get(cart.list).should('have.length', 1)
     })
 
     it('Removendo todos os produtos do carrinho pela homepage', () => {
