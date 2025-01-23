@@ -5,9 +5,14 @@ export default class pageOverview {
     tax = '.summary_tax_label'
     total = '.summary_total_label'
     buttonFinish = '.btn_action'
+    buttonCancel = '.cart_cancel_link'
 
     clickFinish(){
         cy.get(this.buttonFinish).click()
+    }
+
+    clickCancel(){
+        cy.get(this.buttonCancel).click()
     }
 
     pageOverview(){
