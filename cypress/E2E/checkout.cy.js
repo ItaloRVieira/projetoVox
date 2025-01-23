@@ -1,13 +1,9 @@
-import pageLogin from "../support/pages/login.page";
 import Home from "../support/pages/home.page";
-import pageProduct from "../support/pages/product.page";
 import pageCart from "../support/pages/cart.page";
 import pageCheckout from "../support/pages/checkout.page";
 import pageOverview from "../support/pages/overview.page";
 
-const login = new pageLogin()
 const homePage = new Home()
-const product = new pageProduct()
 const cart = new pageCart()
 const checkout = new pageCheckout()
 const overview = new pageOverview()

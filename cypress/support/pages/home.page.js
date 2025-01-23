@@ -9,6 +9,7 @@ export default class Home {
     removeTwo = ':nth-child(2) > .pricebar > .btn_secondary'
     productOne = '#item_4_title_link > .inventory_item_name'
     productTwo = '#item_0_title_link > .inventory_item_name'
+    counter = '.fa-layers-counter'
 
     homePage(){
         cy.get(this.labelProduct).should('be.visible')
