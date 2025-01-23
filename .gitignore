@@ -160,4 +160,7 @@ dist
 .history
 .ionide
 
+# Ignore all screenshots
+cypress/screenshots/
+
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocodegit
